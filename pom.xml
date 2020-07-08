@@ -10,6 +10,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>grpc-server</module>
+    <module>grpc-client</module>
   </modules>
 
   <properties>
