@@ -1,0 +1,48 @@
+
+//proto 文件编写规范  详细信息参考grpc文件编写文档
+//下面的proto文件为编写样例，包含了各种相关的数据类型，详细参考文档
+syntax = "proto3";
+
+package VideoJobManager;
+
+option java_package = "com.hugu.grpc.proto";
+option java_outer_classname = "GrpcTest";
+option java_generate_equals_and_hash = true;
+
+
+message ServiceInput {
+  string userName = 1;
+  bool   isAdd = 2;
+  int32  code = 3;
+  RequestType requestType = 4;
+  map<string, string> inputParams = 5;
+  oneof Request {
+    AddRequest addRequest = 6;
+    QueryRequest queryRequest = 7;
+  }
+}
+
+enum RequestType {
+  ADD = 0;
+  DEL = 1;
+  UPDATE = 2;
+  QUERY = 3;
+}
+
+
+message AddRequest {
+  repeated string addInfos = 1;
+}
+
+message QueryRequest {
+  string queryId = 1;
+}
+
+message ServiceResponse {
+  int32 code = 1;
+  string message = 2;
+}
+
+service ServiceTask {
+  rpc handleService(ServiceInput) returns (ServiceResponse) {}
+}
