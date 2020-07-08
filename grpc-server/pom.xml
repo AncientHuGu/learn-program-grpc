@@ -31,6 +31,10 @@
       <artifactId>grpc-stub</artifactId>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+    </dependency>
   </dependencies>
 
   <!-- grpc 编译插件 -->
