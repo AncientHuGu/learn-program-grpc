@@ -18,6 +18,7 @@
     <grpc.version>1.16.0</grpc.version>         <!-- grpc版本 -->
     <log4j.version>2.11.1</log4j.version>
     <protobuf.version>3.5.0</protobuf.version>
+    <junit.test.version>4.12</junit.test.version>
   </properties>
 
 
@@ -53,6 +54,12 @@
         <groupId>org.apache.logging.log4j</groupId>
         <artifactId>log4j-core</artifactId>
         <version>${log4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.test.version}</version>
+        <scope>test</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
