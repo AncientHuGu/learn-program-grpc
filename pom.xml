@@ -19,7 +19,7 @@
     <grpc.version>1.16.0</grpc.version>         <!-- grpc版本 -->
     <log4j.version>2.11.1</log4j.version>
     <protobuf.version>3.5.0</protobuf.version>
-    <junit.test.version>4.12</junit.test.version>
+    <junit.test.version>4.13.1</junit.test.version>
   </properties>
 
 
